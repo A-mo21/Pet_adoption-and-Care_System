@@ -1,0 +1,346 @@
+/* Container for the 60-40 layout */
+.container {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Left content (60%) */
+.content-left {
+  flex: 0 0 60%; /* 60% width */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Post details and description split into two sections */
+.info-container {
+  display: flex;
+  margin-top: -10px;
+  /* justify-content: space-between; */
+  gap: 20px;
+}
+
+/* Post details (left side) */
+.post-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 15px;
+}
+
+/* Post description (right side) */
+.post-description {
+  flex: 1;
+  background-color: #fff;
+  /* padding: 20px; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* Post details styling */
+.post-detail {
+  margin-bottom: 10px;
+}
+
+.post-detail span {
+  font-weight: bold;
+}
+
+/* Post image container */
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of left section */
+  max-width: 100%;
+}
+
+.card-img img {
+  width: 100%; /* Scale image to container width */
+  max-height: 300px; /* Set max height to prevent oversized images */
+  object-fit: contain; /* Preserve aspect ratio without cropping */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Right content (40%) */
+.content-right {
+  flex: 0 0 40%; /* 40% width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Map styling */
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat box styling */
+.chat-box {
+  background-color: #f9f9f9;
+  padding: 15px;
+  height: 40vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box h2 {
+  text-align: center;
+  color: rgb(61, 57, 194);
+  margin-bottom: 15px;
+}
+
+.chat-box textarea {
+  width: 90%;
+  height: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.chat-box button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-box button:hover {
+  background-color: #0056b3;
+}
+
+/* User Info Box styling */
+.user-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.user-profile .username {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.user-profile .username:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Modal Background */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+  padding: 5px;
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-color: #fff;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 80vh;
+  position: relative;
+  /* display: flex;
+  flex-direction: row; */
+  /* align-items: center; */
+}
+#profile-container {
+  /* display: flex; */
+  height: 80vh;
+}
+/* Profile Picture */
+.profile-pic {
+  width: 400px; /* Adjust the size */
+  height: 400px;
+  object-fit: cover; /* Keeps aspect ratio */
+  border-radius: 50%;
+  /* margin-bottom: 20px; */
+}
+
+/* Profile Information */
+/* .profile-info {
+  width: 100%;
+  text-align: center;
+} */
+
+.profile-info h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Close Button */
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-page {
+  display: flex;
+  height: 80vh;
+  justify-content: space-between;
+}
+
+.profile-card-left {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card-right {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.username {
+  font-size: 1.5em;
+}
+
+.joined-date {
+  font-size: 1em;
+}
+
+.user-details {
+  font-size: 1.1em;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
+.view-posts-btn {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background-color change */
+  margin-top: 10px; /* Space above the button */
+}
+
+/* Change background on hover */
+.view-posts-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.1); /* Slightly darker green */
+}
+
+/* Change background on focus */
+.view-posts-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px #4caf50; /* Add a green focus glow */
+}
+
+/* Change background on active state */
+.view-posts-btn:active {
+  background-color: #388e3c; /* Even darker green */
+}
+
+.visit-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  margin-top: 10px;
+  gap: 15px; /* Space between items */
+}
+
+.post-detail {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.post-detail span {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.post-detail p {
+  margin: 0;
+  color: #666;
+}
+.pet-name {
+  padding-top: 10px;
+  padding-bottom: -5px;
+}

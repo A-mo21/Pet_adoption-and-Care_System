@@ -1,0 +1,202 @@
+.profile-page {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 50px auto;
+}
+
+.profile-card-left,
+.profile-card-right {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card-left {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.profile-card-right {
+  flex: 0.7;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.username {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.joined-date {
+  color: #777;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+/* Existing CSS */
+
+.posts-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #d1ba5e;
+  color: rgb(252, 248, 248);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.posts-btn:hover {
+  background-color: #218838;
+}
+
+.form-group input[type="file"] {
+  margin-top: 5px;
+}
+
+.user-details {
+  position: relative; /* This makes the child elements, including the edit button, positionable inside */
+  background-color: #f9f9f9; /* Light background color */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better aesthetics */
+  font-family: Arial, sans-serif;
+}
+
+.user-details p {
+  margin: 10px 0; /* Space between paragraphs */
+  color: #333; /* Text color */
+  font-size: 16px; /* Font size for the text */
+}
+
+.user-details strong {
+  font-weight: bold;
+}
+
+.edit-btn {
+  position: absolute; /* Position the button absolutely within the parent .user-details */
+  top: 10px; /* Aligns the button 10px from the top */
+  right: 10px; /* Aligns the button 10px from the right */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 12px; /* Padding inside the button */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove the underline from the link */
+  font-size: 14px; /* Button text size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.edit-profile-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+  background-color: #0056b3;
+}
+.cancel-btn {
+  background-color: #f44336; /* Red background for the cancel button */
+  color: white; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* No underline */
+  font-size: 14px;
+  cursor: pointer;
+  /* Add space between Update and Cancel buttons */
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+.form-actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-picture-input {
+  margin-bottom: 20px; /* Space below the profile picture input */
+  position: relative; /* Position relative to allow absolute positioning of the button */
+}
+
+.profile-picture-input label {
+  display: block; /* Make label occupy the full width */
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold;
+}
+
+.profile-picture-input input[type="file"] {
+  display: none; /* Hide the default file input box */
+}
+
+.profile-picture-btn {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 12px; /* Padding inside the button */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.profile-picture-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.profile-picture-btn + label {
+  display: block;
+  margin-top: 10px; /* Space between button and label */
+}
+.hidden {
+  display: none;
+}

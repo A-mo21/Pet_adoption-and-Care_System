@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniquePalace - Home</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <?php include 'nav.php'; 
+    include_once("db_connect.php");
+        $donations = $conn->query("SELECT * FROM adoptions WHERE action =
+    'donate' ORDER BY id DESC LIMIT 4"); $requests = $conn->query("SELECT * FROM
+    adoptions WHERE action = 'adopt' ORDER BY id DESC LIMIT 4"); ?>
+    <main>
+      <div class="hero-section">
+        <h2>Welcome to PawPalace</h2>
+        <p>Your one-stop destination for pet adoption.</p>
+        <button
+          class="post-adoption-btn"
+          onclick="window.location.href='post-adoption.php'"
+        >
+          Post Adoption
+        </button>
+      </div>
+      <div class="separation"></div>
+
+      <?php
+      function displayCard($row)
+            {
+                $image = $row['image'];
+                $category = $row['category'];
+                $name = $row['name'];
+                $location = $row['location'];
+                $species = $row['species'];
+                $age = $row['age'];
+                $size = $row['size'];
+                $vaccinated = $row['vaccinated'];
+                $gender = $row['gender'];
+                $neutered = $row['neutered'];
+                $id = $row['id'];
+                include 'card.php';
+            }?>
+      <section class="available-adoptions">
+        <h2>Available Adoptions</h2>
+        <div class="adoption-cards">
+          <?php while ($row = $donations->fetch_assoc()) { displayCard($row); }
+          ?>
+        </div>
+        <button
+          class="browse-all-btn"
+          onclick="window.location.href='available-adoptions.php'"
+        >
+          Browse All
+        </button>
+      </section>
+
+      <div class="separation"></div>
+
+      <section class="adoption-requests">
+        <h2>Adoption Requests</h2>
+        <div class="adoption-cards">
+          <?php while ($row = $requests->fetch_assoc()) { displayCard($row); }
+          ?>
+        </div>
+        <button
+          class="browse-all-btn"
+          onclick="window.location.href='adoption-requests.php'"
+        >
+          Browse All
+        </button>
+      </section>
+
+      <div class="separation"></div>
+
+      <section class="contact-us">
+        <h2>Quick Links</h2>
+        <div class="quicklinks">
+          <ul>
+            <li><a href="faq.php">FAQ</a></li>
+            <li><a href="help-center.php">Help Center</a></li>
+            <li><a href="account.php">Account</a></li>
+            <li><a href="feedback.php">Send Feedback</a></li>
+          </ul>
+          <ul>
+            <li><a href="investor-relations.php">Investor Relations</a></li>
+            <li><a href="terms.php">Terms of Use</a></li>
+            <li><a href="privacy.php">Privacy</a></li>
+            <li><a href="cookie-preferences.php">Cookie Preferences</a></li>
+          </ul>
+          <ul>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="legal-notices.php">Legal Notices</a></li>
+            <li><a href="donate.php">Donate</a></li>
+            <li><a href="fundraise.php">Fundraise</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 PawPalace. All rights reserved.</p>
+    </footer>
+    <script src="home.js"></script>
+    <script src="updatebutton.js"></script>
+  </body>
+</html>

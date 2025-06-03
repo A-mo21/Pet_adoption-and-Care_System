@@ -1,0 +1,67 @@
+.available-adoptions {
+  padding: 10px;
+}
+
+.available-adoptions h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.adoption-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 47px;
+  justify-content: flex-start;
+}
+
+
+
+.adoption-card a {
+  text-decoration: none;
+}
+
+.adoption-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adoption-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.adoption-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.header1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px auto;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+.adoption-card {
+  background-color: var(--bg-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 20vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+}
+
+
+.adoption-card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.adoption-card img {
+  width: 100%; /* Ensure images fit the card */
+  height: auto;
+}
+

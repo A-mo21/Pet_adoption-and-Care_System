@@ -1,0 +1,220 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #3eada4;
+  --footer-color: rgb(124, 177, 164);
+  --text-color: white;
+  --bg-color: #f9f9f9;
+  --text-color-inv: black;
+  --background-color: rgb(227, 227, 213);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.hero-section {
+  background-image: url("assets/hero-bg.jpg");
+  height: 70vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color-inv);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 10px;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.hero-section h2 {
+  transform: translateY(-30px);
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.hero-section p {
+  transform: translateY(-50px);
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.hero-section .post-adoption-btn {
+  transform: translateY(-60px);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.hero-section .post-adoption-btn:hover {
+  background-color: var(--primary-color);
+}
+
+main {
+  text-align: center;
+}
+
+footer {
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.separation {
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+/* .available-adoptions {
+  padding: 10px;
+}
+
+.available-adoptions h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.adoption-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.adoption-card {
+  background-color: var(--bg-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 20vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.adoption-card a {
+  text-decoration: none;
+}
+
+.adoption-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adoption-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.adoption-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+} */
+
+.browse-all-btn {
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.browse-all-btn:hover {
+  transform: scale(1.2);
+  background-color: var(--secondary-color);
+}
+
+.adoption-requests {
+  padding: 10px;
+}
+
+.adoption-requests h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.contact-us {
+  text-align: center;
+}
+
+.contact-us h2 {
+  margin-bottom: 20px;
+}
+
+.quicklinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.quicklinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quicklinks li {
+  margin: 10px 0;
+}
+
+.quicklinks a {
+  text-decoration: none;
+  color: var(--text-color-inv);
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+}
+
+.quicklinks a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .nav-links input,
+  .nav-links a,
+  .nav-links .dropbtn,
+  .nav-buttons button {
+    margin: 10px 0;
+  }
+
+  .adoption-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adoption-card {
+    width: 90%;
+  }
+
+  .quicklinks {
+    grid-template-columns: 1fr;
+  }
+}

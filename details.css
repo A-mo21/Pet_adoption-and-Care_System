@@ -1,0 +1,142 @@
+.details-container {
+
+ display: flex;
+
+ gap: 20px;
+
+ padding: 20px;
+
+ max-width: 1200px; /* Set a maximum width for the container */
+
+ margin: 0 auto; /* Center the container */
+
+}
+
+
+
+.details-info {
+
+ width: 60%;
+
+ display: flex;
+
+ flex-direction: column;
+
+ gap: 15px;
+
+}
+
+
+
+.details-info img {
+
+ width: 100%; /* Ensure the image scales properly */
+
+ max-height: 300px; /* Limit the height */
+
+ object-fit: cover; /* Maintain aspect ratio without stretching */
+
+ border-radius: 8px; /* Optional: Add rounded corners */
+
+ border: 1px solid #ddd; /* Optional: Add a light border for better visibility */
+
+}
+
+
+
+.details-extra {
+
+ width: 40%;
+
+ display: flex;
+
+ flex-direction: column;
+
+ gap: 20px;
+
+}
+
+
+
+#map {
+
+height: 300px;
+
+width: 100%;
+
+border: 1px solid #ccc;
+
+border-radius: 8px; /* Optional: Rounded corners */
+
+}
+
+
+
+#chatbox {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+border: 1px solid #ccc; /* Optional: Border for visibility */
+
+padding: 15px;
+
+border-radius: 8px;
+
+background-color: #f9f9f9;
+
+}
+
+
+
+#chatbox textarea {
+
+width: 100%;
+
+height: 100px;
+
+padding: 10px;
+
+resize: none; /* Prevent resizing for consistent UI */
+
+border: 1px solid #ccc;
+
+border-radius: 5px;
+
+}
+
+
+
+#chatbox button {
+
+padding: 10px;
+
+background-color: #007bff;
+
+color: white;
+
+border: none;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+font-size: 16px;
+
+transition: background-color 0.3s;
+
+}
+
+
+
+#chatbox button:hover {
+
+background-color: #0056b3;
+
+}
+
+
+

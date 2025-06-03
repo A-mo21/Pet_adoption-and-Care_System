@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #1b46a2;
+  --secondary-color: #3eada4;
+  --footer-color: rgb(124, 177, 164);
+  --text-color: white;
+  --bg-color: #f9f9f9;
+  --text-color-inv: black;
+  --background-color: rgb(227, 227, 213);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  
+}
+
+.hero {
+  height: 130vh;
+  background-image: url("assets/signup2g.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  flex-direction: column;
+  position: absolute;
+  top: 15%;
+  background-color: rgba(255, 255, 255, 0.2);
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.signup-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.signup-container h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin-left: 6px;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.input-group input {
+  width: 90%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-group button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-group button a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.btn-group button:hover {
+  background-color: var(--secondary-color);
+}
+
+.terms {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.terms a {
+  color: var(--primary-color);
+  text-decoration: none;
+}

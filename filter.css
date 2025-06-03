@@ -1,0 +1,87 @@
+/* Style for the filter section */
+.filter-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Style for the filter toggle button */
+.filter-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #45a049;
+}
+
+/* Style for the filter options form */
+.filter-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+  width: 80vw;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Each filter element is placed in a div */
+.filter-item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px; 
+  align-items: center;
+  /* Small gap between label and input */
+}
+
+/* Aligning labels and inputs closely */
+.filter-options label {
+  font-weight: bold;
+}
+
+/* Reducing padding between the input and label */
+.filter-options select,
+.filter-options input {
+  padding: 6px; /* Reduced padding for a compact look */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: auto;
+  min-width: 150px; /* Ensures input fields don't shrink too much */
+}
+.formclass {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90vw;
+  gap: 30px;
+}
+.filter-item {
+  display: flex;
+  ;
+}
+/* Style for the apply filter button */
+.apply-filter-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-filter-btn:hover {
+  background-color: #0056b3;
+}
